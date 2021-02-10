@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CSE480_DRAFT1</string>
+    <string name="header">My Daily Log</string>
+    <string name="wakeUp">Wake-Up Questions</string>
+    <string name="nap">Nap Questions</string>
+    <string name="bedtime">Bedtime Questions</string>
+    <string name="reminders">Set Reminders</string>
+    <string name="userInfo">My Info</string>
+    <string name="help">Help</string>
+    <string name="start">Start Light Vision Timer</string>
+    <string name="logout">Log Out</string>
+</resources>

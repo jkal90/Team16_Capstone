@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/header"
+        android:textColor="#673AB7"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="142dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="30dp"
+        android:paddingRight="10dp">
+
+        <FrameLayout
+            android:layout_width="110dp"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonWake"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/wakeUp"
+                android:textSize="12sp"
+                app:backgroundTint="#4DA112" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true">
+
+            <Button
+                android:id="@+id/buttonNap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/nap"
+                android:textSize="12sp"
+                app:backgroundTint="#4DA112" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true">
+
+            <Button
+                android:id="@+id/buttonBed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/bedtime"
+                android:textSize="12sp"
+                app:backgroundTint="#4DA112" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/start"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/start"
+            app:backgroundTint="#FF9800" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp">
+
+        <FrameLayout
+            android:layout_width="110dp"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonRemind"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/reminders"
+                android:textSize="12sp"
+                app:backgroundTint="#4DA112" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true">
+
+            <Button
+                android:id="@+id/buttonInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/userInfo"
+                android:textSize="12sp"
+                app:backgroundTint="#4DA112" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true">
+
+            <Button
+                android:id="@+id/buttonHelp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/help"
+                android:textSize="12sp"
+                app:backgroundTint="#4DA112" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/logOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/logout" />
+    </FrameLayout>
+
+</LinearLayout>
