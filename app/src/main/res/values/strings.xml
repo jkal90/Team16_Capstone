@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CSE480_DRAFT1</string>
+    <string name="app_name">ECE480_DRAFT1</string>
     <string name="header">My Daily Log</string>
     <string name="wakeUp">Wake-Up Questions</string>
     <string name="nap">Nap Questions</string>
