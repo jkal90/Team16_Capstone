@@ -9,4 +9,10 @@
     <string name="help">Help</string>
     <string name="start">Start Light Vision Timer</string>
     <string name="logout">Log Out</string>
+    <string name="wakeUpDesc">Questions to answer upon waking up</string>
+    <string name="napDesc">Questions to answer after a nap</string>
+    <string name="bedtimeDesc">Questions to answer at bedtime</string>
+    <string name="notificationDesc">Notifications</string>
+    <string name="infoDesc">Information about you</string>
+    <string name="questionDesc">Questions</string>
 </resources>
