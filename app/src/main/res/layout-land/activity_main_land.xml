@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Space
+        android:id="@+id/topSpacer"
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/header"
+        android:textColor="#673AB7"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="142dp" />
+
+    <RelativeLayout
+        android:id="@+id/firstRow"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="30dp"
+        android:paddingRight="10dp">
+
+        <FrameLayout
+            android:id="@+id/wakeUpFrame"
+            android:layout_width="110dp"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/wakeUpButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/wakeUpDesc"
+                android:onClick="onPressWakeUpQuestions"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/__clipart_sun_1" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/napFrame"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true">
+
+            <ImageButton
+                android:id="@+id/napButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/napDesc"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/zz" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/bedtimeFrame"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true">
+
+            <ImageButton
+                android:id="@+id/bedtimeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/bedtime"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/moon" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/firstRowButtonNames"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/wakeUpText"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:onClick="onPressWakeUpQuestions"
+            android:text="@string/wakeUp" />
+
+        <TextView
+            android:id="@+id/napText"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/nap" />
+
+        <TextView
+            android:id="@+id/bedtimeText"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="@string/bedtime" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/start"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/start"
+            app:backgroundTint="#FF9800" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/secondRow"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp">
+
+        <FrameLayout
+            android:id="@+id/reminderFrame"
+            android:layout_width="110dp"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/reminderButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/notificationDesc"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/bell" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/infoFrame"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true">
+
+            <ImageButton
+                android:id="@+id/infoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/infoDesc"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/info" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/questionFrame"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true">
+
+            <ImageButton
+                android:id="@+id/questionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/questionDesc"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/question" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/secondRowButtonNames"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="@string/reminders" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/userInfo" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="@string/help" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/logOutFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/logOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/logout" />
+
+    </FrameLayout>
+
+</LinearLayout>
