@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@null"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -44,6 +44,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:contentDescription="@string/wakeUpDesc"
+                android:onClick="onPressWakeUpQuestions"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/__clipart_sun_1" />
 
@@ -78,7 +79,7 @@
                 android:id="@+id/bedtimeButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#FFFFFF"
+                android:background="@null"
                 android:contentDescription="@string/bedtime"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/moon" />
@@ -100,7 +101,9 @@
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
             android:gravity="center"
-            android:text="@string/wakeUp" />
+            android:onClick="onPressWakeUpQuestions"
+            android:text="@string/wakeUp"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/napText"
@@ -109,7 +112,8 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:gravity="center"
-            android:text="@string/nap" />
+            android:text="@string/nap"
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/bedtimeText"
@@ -119,7 +123,8 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:gravity="center"
-            android:text="@string/bedtime" />
+            android:text="@string/bedtime"
+            android:textSize="18sp"/>
     </RelativeLayout>
 
     <FrameLayout
@@ -134,7 +139,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/start"
-            app:backgroundTint="#FF9800" />
+            app:backgroundTint="#FF9800"
+            android:textSize="18sp"/>
     </FrameLayout>
 
     <RelativeLayout
@@ -172,7 +178,7 @@
                 android:id="@+id/infoButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#FFFFFF"
+                android:background="@null"
                 android:contentDescription="@string/infoDesc"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/info" />
@@ -210,7 +216,8 @@
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
             android:gravity="center"
-            android:text="@string/reminders" />
+            android:text="@string/reminders"
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/textView6"
@@ -219,7 +226,8 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:gravity="center"
-            android:text="@string/userInfo" />
+            android:text="@string/userInfo"
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/textView7"
@@ -229,7 +237,8 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:gravity="center"
-            android:text="@string/help" />
+            android:text="@string/help"
+            android:textSize="18sp"/>
     </RelativeLayout>
 
     <FrameLayout
