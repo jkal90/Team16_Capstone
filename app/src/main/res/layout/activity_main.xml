@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/get"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:background="@null"
@@ -113,7 +114,7 @@
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:text="@string/nap"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/bedtimeText"
@@ -124,7 +125,7 @@
             android:layout_alignParentBottom="true"
             android:gravity="center"
             android:text="@string/bedtime"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
     </RelativeLayout>
 
     <FrameLayout
@@ -139,8 +140,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/start"
-            app:backgroundTint="#FF9800"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            app:backgroundTint="#FF9800" />
     </FrameLayout>
 
     <RelativeLayout
@@ -217,7 +218,7 @@
             android:layout_alignParentBottom="true"
             android:gravity="center"
             android:text="@string/reminders"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView6"
@@ -227,7 +228,7 @@
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:text="@string/userInfo"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView7"
@@ -238,13 +239,13 @@
             android:layout_alignParentBottom="true"
             android:gravity="center"
             android:text="@string/help"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
     </RelativeLayout>
 
     <FrameLayout
         android:id="@+id/logOutFrame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center">
 
         <Button
@@ -254,6 +255,20 @@
             android:layout_gravity="center"
             android:text="@string/logout" />
 
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/testNotifFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/getNotif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/getnotif" />
     </FrameLayout>
 
 </LinearLayout>
