@@ -1,4 +1,14 @@
 package edu.msu.huangmax.cse480_draft1;
 
-public class RepeatingActivity {
+import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class RepeatingActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+
 }

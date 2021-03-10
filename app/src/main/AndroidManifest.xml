@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CSE480_DRAFT1">
-        <activity android:name=".WakeUpQuestionsActivity"></activity>
+        <activity android:name=".ThankYouActivity"></activity>
+        <activity android:name=".WakeUpQuestionsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,6 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".RepeatingActivity" />
+        <activity android:name=".StartTimerActivity" />
+
+        <receiver android:name=".NotificationReceiver" />
     </application>
 
 </manifest>

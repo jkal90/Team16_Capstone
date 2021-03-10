@@ -16,4 +16,13 @@
     <string name="infoDesc">Information about you</string>
     <string name="questionDesc">Questions</string>
     <string name="getnotif">Get Notification</string>
+    <string name="startStopTimer">Start/Stop</string>
+    <string name="initialTimer">30:00</string>
+    <string name="end">End</string>
+    <string name="cont">Continue Therapy</string>
+    <string name="endTherapy">End Therapy</string>
+    <string name="warning">WARNING</string>
+    <string name="incomplete">You have not completed the light therapy.  Are you sure you wish to continue?</string>
+    <string name="thankYou">Thank you</string>
+    <string name="returnHome">Return Home</string>
 </resources>
