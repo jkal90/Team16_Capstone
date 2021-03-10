@@ -1,15 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WakeUpQuestionsActivity">
 
-    <view
-        android:id="@+id/wakeUpQuestionsView"
-        class="edu.msu.huangmax.cse480_draft1.WakeUpQuestionsView"
+    <View
+        android:id="@+id/spacerOne"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/wakeUpTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerOne"
+        android:layout_alignBottom="@id/editTextTime"
+        android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="@string/wakeUpTime"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerOne"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/wakeUpTime"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enterTimeHere"
+        android:inputType="time" />
+
+    <View
+        android:id="@+id/spacerTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/wakeUpTime" />
+
+    <TextView
+        android:id="@+id/difficultyQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerTwo"
+        android:layout_alignEnd="@id/wakeUpTime"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="@string/sleepDifficulty"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/wakeupSpinnerOne"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerTwo"
+        android:layout_alignBottom="@id/difficultyQuestion"
+        android:layout_toEndOf="@id/difficultyQuestion" />
+
+    <View
+        android:id="@+id/spacerThree"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/difficultyQuestion" />
+
+    <TextView
+        android:id="@+id/duringNightQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerThree"
+        android:layout_alignEnd="@id/wakeUpTime"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="@string/duringNight"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/wakeupSpinnerTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerThree"
+        android:layout_alignBottom="@id/duringNightQuestion"
+        android:layout_toEndOf="@id/difficultyQuestion" />
+
+    <View
+        android:id="@+id/spacerFour"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/duringNightQuestion" />
+
+    <TextView
+        android:id="@+id/tooEarly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerFour"
+        android:layout_alignEnd="@id/wakeUpTime"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="@string/tooEarly"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/wakeupSpinnerThree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerFour"
+        android:layout_alignBottom="@id/tooEarly"
+        android:layout_toEndOf="@id/difficultyQuestion" />
+
+    <View
+        android:id="@+id/spacerFive"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@id/tooEarly" />
+
+    <Button
+        android:id="@+id/submitButtonWakeup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerFive"
+        android:layout_centerHorizontal="true"
+        android:text="@string/submit" />
+
+</RelativeLayout>

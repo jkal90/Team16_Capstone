@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string-array name="wakeupOptionsSpinner">
+        <item >Not at all</item>
+        <item >A little bit</item>
+        <item >Somewhat</item>
+        <item >Quite a bit</item>
+        <item >Very much</item>
+    </string-array>
+
+</resources>

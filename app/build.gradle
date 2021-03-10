@@ -7,8 +7,8 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "edu.msu.huangmax.cse480_draft1"
-        minSdkVersion 16
+        applicationId "edu.msu.huangmax.ece480_app"
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"

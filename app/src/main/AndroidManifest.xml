@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.msu.huangmax.cse480_draft1">
+    package="edu.msu.huangmax.ece480_app">
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CSE480_DRAFT1">
+        android:theme="@style/Theme.ECE480_APP">
         <activity android:name=".ThankYouActivity"></activity>
         <activity android:name=".WakeUpQuestionsActivity" />
         <activity android:name=".MainActivity">
