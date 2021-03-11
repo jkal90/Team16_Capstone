@@ -64,6 +64,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:contentDescription="@string/napDesc"
+                android:onClick="onPressNapQuestions"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/zz" />
 
@@ -73,8 +74,7 @@
             android:id="@+id/bedtimeFrame"
             android:layout_width="110dp"
             android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true">
+            android:layout_alignParentEnd="true">
 
             <ImageButton
                 android:id="@+id/bedtimeButton"
@@ -82,6 +82,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:contentDescription="@string/bedtime"
+                android:onClick="onPressBedtimeQuestions"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/moon" />
 
@@ -113,6 +114,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:gravity="center"
+            android:onClick="onPressNapQuestions"
             android:text="@string/nap"
             android:textSize="18sp" />
 
@@ -121,9 +123,9 @@
             android:layout_width="110dp"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:gravity="center"
+            android:onClick="onPressBedtimeQuestions"
             android:text="@string/bedtime"
             android:textSize="18sp" />
     </RelativeLayout>
@@ -190,8 +192,7 @@
             android:id="@+id/questionFrame"
             android:layout_width="110dp"
             android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true">
+            android:layout_alignParentEnd="true">
 
             <ImageButton
                 android:id="@+id/questionButton"
@@ -236,7 +237,6 @@
             android:layout_width="110dp"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:gravity="center"
             android:text="@string/help"

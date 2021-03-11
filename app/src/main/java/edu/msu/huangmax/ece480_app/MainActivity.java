@@ -5,19 +5,15 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
 import android.app.AlarmManager;
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.security.KeyStore;
-import java.util.Calendar;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Button testNotifButton;
     private AlarmManager alarmMgr;
     private PendingIntent alarmIntent;
-    private DatabaseWriter databaseWriter = new DatabaseWriter();
+    private DatabaseTool databaseTool = new DatabaseTool();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,5 +79,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
         Date date = new Date();
+    }
+
+    public void onPressNapQuestions(View view) {
+        Intent intent = new Intent(this, NapQuestionsActivity.class);
+        startActivity(intent);
+    }
+
+    public void onPressBedtimeQuestions(View view) {
+        Intent intent = new Intent(this, BedtimeQuestionsActivity.class);
+        startActivity(intent);
     }
 }

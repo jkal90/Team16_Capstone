@@ -1,9 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NapQuestionsActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/spacerOne"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/napDuringDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerOne"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/napDuringDay"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/napSpinnerOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerOne"
+        android:layout_alignBottom="@id/napDuringDay"
+        android:layout_toEndOf="@id/napDuringDay"
+        android:spinnerMode="dropdown" />
+
+    <View
+        android:id="@+id/spacerTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/napDuringDay" />
+
+    <TextView
+        android:id="@+id/firstNap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerTwo"
+        android:gravity="center"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="@string/firstNap"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/firstNapStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/firstNap"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/startTime"
+        android:inputType="time"
+        android:textColor="#000000"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/firstNapEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/firstNap"
+        android:layout_toEndOf="@id/firstNapStart"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/endTime"
+        android:inputType="time" />
+
+    <View
+        android:id="@+id/spacerThree"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/firstNapStart" />
+
+    <TextView
+        android:id="@+id/secondNap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerThree"
+        android:gravity="center"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="@string/secondNap"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/secondNapStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/secondNap"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/startTime"
+        android:inputType="time" />
+
+    <EditText
+        android:id="@+id/secondNapEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/secondNap"
+        android:layout_toEndOf="@id/secondNapStart"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/endTime"
+        android:inputType="time" />
+
+    <View
+        android:id="@+id/spacerFour"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/secondNapStart" />
+
+    <TextView
+        android:id="@+id/thirdNap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerFour"
+        android:gravity="center"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="@string/thirdNap"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/thirdNapStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thirdNap"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/startTime"
+        android:inputType="time" />
+
+    <EditText
+        android:id="@+id/thirdNapEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thirdNap"
+        android:layout_toEndOf="@id/thirdNapStart"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/endTime"
+        android:inputType="time" />
+
+    <View
+        android:id="@+id/spacerFive"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@id/thirdNapStart" />
+
+    <Button
+        android:id="@+id/submitButtonNap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerFive"
+        android:layout_centerHorizontal="true"
+        android:text="@string/submit"
+        android:textSize="28sp" />
+
+</RelativeLayout>

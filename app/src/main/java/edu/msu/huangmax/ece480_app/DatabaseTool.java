@@ -2,7 +2,7 @@ package edu.msu.huangmax.ece480_app;
 
 import java.sql.*;
 
-public class DatabaseWriter {
+public class DatabaseTool {
 
     private String userId;
 

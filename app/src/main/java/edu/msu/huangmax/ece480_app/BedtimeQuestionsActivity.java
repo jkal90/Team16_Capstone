@@ -27,7 +27,7 @@ public class BedtimeQuestionsActivity extends AppCompatActivity {
     }
 
     public void onSubmit() {
-        DatabaseWriter databaseWriter = new DatabaseWriter();
+        DatabaseTool databaseTool = new DatabaseTool();
 
         EditText getter;
         getter = findViewById(R.id.bedtimeEntry);
@@ -37,11 +37,7 @@ public class BedtimeQuestionsActivity extends AppCompatActivity {
         getter = findViewById(R.id.sleepinessLevel);
         responses[2] = getter.getText().toString();
 
-        databaseWriter.writeBedtimeQuestions(responses);
-
-        for (int i = 0; i < 3; i++) {
-            System.out.println(responses[i]);
-        }
+        databaseTool.writeBedtimeQuestions(responses);
 
         Intent intent = new Intent(this, ThankYouActivity.class);
         startActivity(intent);

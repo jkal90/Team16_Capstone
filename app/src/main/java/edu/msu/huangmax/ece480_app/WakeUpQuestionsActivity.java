@@ -2,6 +2,7 @@ package edu.msu.huangmax.ece480_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -48,13 +49,16 @@ public class WakeUpQuestionsActivity extends AppCompatActivity {
     }
 
     public void onSubmit() {
-        DatabaseWriter databaseWriter = new DatabaseWriter();
+        DatabaseTool databaseTool = new DatabaseTool();
 
         EditText wakeUpTimeGet = findViewById(R.id.editTextTime);
         responses[0] = wakeUpTimeGet.getText().toString();
         for (int i = 0; i < spinners.length; i++) {
             responses[i + 1] = spinners[i].getSelectedItem().toString();
         }
-        databaseWriter.writeWakeUpQuestions(responses);
+        databaseTool.writeWakeUpQuestions(responses);
+
+        Intent intent = new Intent(this, ThankYouActivity.class);
+        startActivity(intent);
     }
 }

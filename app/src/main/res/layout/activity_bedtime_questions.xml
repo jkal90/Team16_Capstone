@@ -1,9 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BedtimeQuestions">
+    tools:context=".BedtimeQuestionsActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/spacerOne"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/bedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerOne"
+        android:layout_alignBottom="@id/bedtimeEntry"
+        android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="@string/bedTime"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/bedtimeEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerOne"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/bedTime"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enterTimeHere"
+        android:inputType="time"
+        android:textColor="#000000" />
+
+    <View
+        android:id="@+id/spacerTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/bedTime" />
+
+    <TextView
+        android:id="@+id/bedtimeFatigue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerTwo"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/bedtimeFatigue"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/fatigueExplanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bedtimeFatigue"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/fatigueExplanation"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/fatigueLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fatigueExplanation"
+        android:layout_centerInParent="true"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="number" />
+
+    <View
+        android:id="@+id/spacerThree"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/fatigueLevel" />
+
+    <TextView
+        android:id="@+id/bedtimeSleepiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerThree"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/bedtimeSleepiness"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/sleepinessExplanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bedtimeSleepiness"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/sleepinessExplanation"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/sleepinessLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sleepinessExplanation"
+        android:layout_centerInParent="true"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="number" />
+
+    <View
+        android:id="@+id/spacerFour"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/sleepinessLevel" />
+
+    <Button
+        android:id="@+id/submitButtonBedtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerFour"
+        android:layout_centerHorizontal="true"
+        android:text="@string/submit"
+        android:textSize="28sp" />
+</RelativeLayout>

@@ -18,6 +18,7 @@ public class StartTimerActivity extends AppCompatActivity {
     private Button endButton;
     private CountDownTimer timer;
     private long timeLeftInMilliseconds = 1800000; //30 minutes
+     // 5000 for demo
     private boolean running = false;
 
     @Override
