@@ -184,6 +184,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:contentDescription="@string/infoDesc"
+                android:onClick="onPressMyInfoQuestions"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/info" />
         </FrameLayout>

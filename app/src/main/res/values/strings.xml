@@ -43,4 +43,8 @@
     <string name="fatigueExplanation">Please enter a number from 0 to 10; 0 means no fatigue, 10 means worst fatigue</string>
     <string name="bedtimeSleepiness">During the day, what was your average level of sleepiness?</string>
     <string name="sleepinessExplanation">Please enter a number from 0 to 10; 0 means no sleepiness, 10 means worst sleepiness</string>
+    <string name="my_info">My Info</string>
+    <string name="name">Name</string>
+    <string name="nameInput">Name:</string>
+    <string name="submit_info">Submit</string>
 </resources>

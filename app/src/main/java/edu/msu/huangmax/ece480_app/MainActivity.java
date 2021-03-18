@@ -90,4 +90,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BedtimeQuestionsActivity.class);
         startActivity(intent);
     }
+
+    public void onPressMyInfoQuestions(View view) {
+        Intent intent = new Intent(this, MyInfoActivity.class);
+        startActivity(intent);
+    }
 }
