@@ -20,7 +20,7 @@
         android:layout_centerHorizontal="true"
         android:text="@string/startStopTimer"
         android:textSize="30sp"
-        app:backgroundTint="#4CAF50" />
+        android:backgroundTint="#4CAF50" />
 
     <Button
         android:id="@+id/endButton"
@@ -30,5 +30,5 @@
         android:layout_centerHorizontal="true"
         android:text="@string/end"
         android:textSize="50sp"
-        app:backgroundTint="#FF5722" />
+        android:backgroundTint="#FF5722" />
 </RelativeLayout>
