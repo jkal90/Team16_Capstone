@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="arctic.cse.msu.edu" id="1431bc11-c8b9-4f45-b7d3-659f6d583503" port="22" nameFormat="DESCRIPTIVE" username="huangmax" />
+    </configs>
+  </component>
+</project>

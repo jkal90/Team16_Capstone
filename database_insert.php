@@ -2,19 +2,24 @@
 
     $con=mysqli_connect("35.188.230.66","root","ece480team16","patientdata");
 
-    if (mysqli_connect_errno($con)) {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    if (!$con) {
+        die("Failed to connect to MySQL: " . mysqli_connect_error());
     }
 
-    $tablename = $_GET['table_name'];
-    $time = $_GET['time'];
-    $user_id = $_GET['user_id'];
-    $response1 = $_GET['response1'];
-    $response2 = $_GET['response2'];
-    $response3 = $_GET['response3'];
+    $tablename = $_POST['table_name'];
+    $time = $_POST['time'];
+    $user_id = $_POST['user_id'];
+    $response1 = $_POST['response1'];
+    $response2 = $_POST['response2'];
+    $response3 = $_POST['response3'];
 
-    $result = mysqli_query($con,"INSERT INTO $tablename VALUES ($time, $response1, $response2,
-        $response3, $user_id)");
+    $query = "INSERT INTO '$tablename' VALUES '$time', '$response1', '$response2', '$response3', '$user_id')";
+
+    if(mysqli_query($con,$Sql_Query)){
+        echo 'Data Submitted Successfully';
+    } else {
+        echo 'Try Again';
+    }
 
     mysqli_close($con);
 ?>

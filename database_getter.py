@@ -16,14 +16,6 @@ def main():
     result = cursor.fetchall()
 
     result = [list(element) for element in result]
-    for row in result:
-        hours = str(row[0].seconds // 3600)
-        minutes = (row[0].seconds % 3600) // 60
-        if minutes < 10:
-            minutes = '0' + str(minutes)
-        else:
-            minutes = str(minutes)
-        row[0] = hours + ':' + minutes
     connection.close()
 
     filename = "wakeup_questions.csv"
