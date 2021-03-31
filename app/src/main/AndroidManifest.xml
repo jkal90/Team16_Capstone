@@ -22,7 +22,7 @@
         </activity>
         <activity android:name=".RepeatingActivity" />
         <activity android:name=".StartTimerActivity" />
-
+        <activity android:name=".MyInfoActivity" />
         <receiver android:name=".NotificationReceiver" />
     </application>
 
