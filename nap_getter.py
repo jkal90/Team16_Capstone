@@ -2,7 +2,7 @@ import mysql.connector
 import csv
 
 COL_HEADERS = { "nap_questions": ["Did you wake up during the day?", "1st Nap Start",
-"1st Nap End", "2nd Nap Start", "2nd Nap End", "3rd Nap Start", "3rd Nap End"]}
+"1st Nap End", "2nd Nap Start", "2nd Nap End", "3rd Nap Start", "3rd Nap End", "User ID"]}
 
 
 def main():
