@@ -47,4 +47,8 @@
     <string name="name">Name</string>
     <string name="nameInput">Name:</string>
     <string name="submit_info">Submit</string>
+    <string name="nameDisplay">Name:</string>
+    <string name="nameFIllDisplay">*NAME*</string>
+    <string name="doctor">Doctor:</string>
+    <string name="doctor_name">*DOCTOR NAME*</string>
 </resources>
