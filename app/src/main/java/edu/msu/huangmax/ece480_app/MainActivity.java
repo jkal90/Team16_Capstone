@@ -95,4 +95,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MyInfoActivity.class);
         startActivity(intent);
     }
+
+    public void onPressHelp(View view) {
+        Intent intent = new Intent(this, HelpActivity.class);
+        startActivity(intent);
+    }
 }
