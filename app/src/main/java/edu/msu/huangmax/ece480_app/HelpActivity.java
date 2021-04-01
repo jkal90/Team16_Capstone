@@ -16,7 +16,7 @@ public class HelpActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_help);
 
         vid = (VideoView)findViewById(R.id.videoView);
 
@@ -26,7 +26,7 @@ public class HelpActivity extends AppCompatActivity {
         MediaController m = new MediaController(this);
         vid.setMediaController(m);
 
-        String path = "android.resource://com.aasemjs.videoplaydemo/"+R.raw.videoclip;
+        String path = "/edu.msu.huangmax/app/src/main/res/raw/videoclip.MOV";
 
         Uri u = Uri.parse(path);
 
