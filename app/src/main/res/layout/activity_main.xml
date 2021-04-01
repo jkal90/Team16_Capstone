@@ -201,6 +201,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:contentDescription="@string/questionDesc"
+                android:onClick="onPressHelp"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/question" />
         </FrameLayout>

@@ -20,6 +20,13 @@ public class MyInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myinfo);
 
+        // Initialize
+        Intent intent = getIntent();
+        TextView namePatient = (TextView) findViewById(R.id.insertName);
+
+        TextView nameDoctor = (TextView) findViewById(R.id.insertDoctor);
+
+
     }
 
     public void onSubmit() {
