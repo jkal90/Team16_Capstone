@@ -1,39 +1,41 @@
 package edu.msu.huangmax.ece480_app;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
+import android.webkit.URLUtil;
 import android.widget.MediaController;
+import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 public class HelpActivity extends AppCompatActivity {
 
-    //create class reference
-    VideoView vid;
+
+
+    VideoView myVideo;
+    private MediaController media_control;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
 
-        vid = (VideoView)findViewById(R.id.videoView);
+        myVideo = (VideoView) findViewById(R.id.videoView);
 
-    }
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.videoclip);
 
-    public void playVideo(View v) {
-        MediaController m = new MediaController(this);
-        vid.setMediaController(m);
+        media_control = new MediaController(this);
 
-        String path = "/edu.msu.huangmax/app/src/main/res/raw/videoclip.MOV";
+        myVideo.setMediaController(media_control);
 
-        Uri u = Uri.parse(path);
+        myVideo.setVideoURI(uri);
 
-        vid.setVideoURI(u);
-
-        vid.start();
+        myVideo.start();
 
     }
 }
-
