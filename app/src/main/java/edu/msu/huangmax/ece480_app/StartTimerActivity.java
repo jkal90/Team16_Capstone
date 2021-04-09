@@ -93,6 +93,7 @@ public class StartTimerActivity extends AppCompatActivity {
         countdownText.setText(timeLeft);
     }
     public void end(View view) {
+        stopTimer();
         if (timeLeftInMilliseconds > 0) {
             // The puzzle is done
             // Instantiate a dialog box builder
@@ -102,7 +103,12 @@ public class StartTimerActivity extends AppCompatActivity {
             // Parameterize the builder
             builder.setTitle(R.string.warning);
             builder.setMessage(R.string.incomplete);
-            builder.setPositiveButton(R.string.cont, null);
+            builder.setPositiveButton(R.string.cont, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    startTimer();
+                }
+            });
             builder.setNegativeButton(R.string.endTherapy, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {

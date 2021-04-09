@@ -166,6 +166,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:contentDescription="@string/notificationDesc"
+                android:onClick="onPressNotifications"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/bell" />
 
@@ -221,6 +222,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
             android:gravity="center"
+            android:onClick="onPressNotifications"
             android:text="@string/reminders"
             android:textSize="18sp" />
 
@@ -258,20 +260,6 @@
             android:layout_gravity="center"
             android:text="@string/logout" />
 
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/testNotifFrame"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/getNotif"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="@string/getnotif" />
     </FrameLayout>
 
 </LinearLayout>

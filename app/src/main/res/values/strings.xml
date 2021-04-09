@@ -16,7 +16,7 @@
     <string name="infoDesc">Information about you</string>
     <string name="questionDesc">Questions</string>
     <string name="getnotif">Get Notification</string>
-    <string name="startStopTimer">Start/Stop</string>
+    <string name="startStopTimer">Pause Timer</string>
     <string name="initialTimer">30:00</string>
     <string name="end">End</string>
     <string name="cont">Continue Therapy</string>
@@ -51,4 +51,5 @@
     <string name="nameFIllDisplay">*NAME*</string>
     <string name="doctor">Doctor:</string>
     <string name="doctor_name">*DOCTOR NAME*</string>
+    <string name="set">Set</string>
 </resources>
