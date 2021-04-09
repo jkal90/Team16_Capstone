@@ -1,22 +1,21 @@
 import mysql.connector
 import csv
+import requests
 
 COL_HEADERS = { "wakeup_questions": 
 ["Wake-Up Time", "Difficulty Sleeping", "Waking Up During Night", "Woke Up Too Early", "User ID"],
 "nap_questions": 
-["Did you wake up during the day?", "1st Nap Start",
+["Did you take a nap during the day?", "1st Nap Start",
 "1st Nap End", "2nd Nap Start", "2nd Nap End", "3rd Nap Start", "3rd Nap End", "User ID"],
 "bedtime_questions": 
-["Bed Time", "24-Hour Fatigue Level:", "Average Level of Sleepiness:", "User ID"] }
+["Bed Time", "24-Hour Fatigue Level:", "Average Level of Sleepiness:", "User ID"],
+"timer_usage":
+["Start Time", "End Time", "User ID"] }
 
-def get_connection():
-    connection = mysql.connector.connect(host="35.188.230.66",
-        user="root",
-        password="ece480team16",
-        database="patientdata")
-    return connection
+BASE_REQUEST = 'https://webdev.cse.msu.edu/~huangmax/ece480/ece480app/retrieve_data.php?table='
 
 def main():
+    '''
     connection = get_connection()
     cursor = connection.cursor()
     print("Welcome to the patient CSV getter.")
@@ -27,22 +26,24 @@ def main():
         user_in = input("Would you like data sorted by user_id? (y or n; if n, entries will be ordered by time received): ")
         user_in = user_in.lower()
     sort_by_user = user_in == 'y'
-
-    
+    '''
     for table in COL_HEADERS:
-        query = "SELECT * FROM " + table
-        if sort_by_user:
-            query += " ORDER BY user_id"
-        cursor.execute(query)
-        result = cursor.fetchall()
-        result = [list(element) for element in result]
+        query = BASE_REQUEST + table
+        req = requests.get(query)
+        response = req.text
+        if response == "Failed":
+            print("Failed to retrieve from table ", table)
+            continue
+        response = response.split('\n')
+        response.pop()
+        for i in range(len(response)):
+            response[i] = response[i].split('|')
+            response[i].pop()
         filename = "TABLE" + table + ".csv"
         with open(filename, 'w', newline='') as csvfile:
             csvwriter = csv.writer(csvfile)
             csvwriter.writerow(COL_HEADERS[table])
             csvwriter.writerow([])
-            csvwriter.writerows(result)
-
-    connection.close()
+            csvwriter.writerows(response)
 
 main()

@@ -120,4 +120,40 @@ public class DatabaseTool {
             e.printStackTrace();
         }
     }
+    public void writeTimerUse(String[] responses) {
+        try {
+            Thread thread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try  {
+                        for (int i = 0; i < responses.length; i++) {
+                            if (responses[i].equals("")) {
+                                responses[i] = "N/A";
+                            }
+                        }
+                        String writeLink = link;
+                        writeLink += "timer_insert.php?" + "user_id="
+                                + userId + "&start_time=" + responses[0] + "&end_time=" + responses[1];
+                        for (int i = 0; i < writeLink.length(); i++) {
+                            if (writeLink.charAt(i) == ' ') {
+                                writeLink = writeLink.substring(0, i) + '+' + writeLink.substring(i + 1);
+                            }
+                        }
+                        URL url = new URL(writeLink);
+                        HttpURLConnection con = (HttpURLConnection) url.openConnection();
+                        con.setRequestMethod("POST");
+                        con.connect();
+                        con.getInputStream();
+                        System.out.println(writeLink);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+            thread.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

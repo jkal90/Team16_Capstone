@@ -4,6 +4,7 @@ THIS IS MEANT TO BE USED FOR TESTING ONLY
 '''
 
 import mysql.connector
+import pymysql
 import csv
 
 COL_HEADERS = { "wakeup_questions": 
@@ -15,10 +16,10 @@ COL_HEADERS = { "wakeup_questions":
 ["Bed Time", "24-Hour Fatigue Level:", "Average Level of Sleepiness:", "User ID"] }
 
 def get_connection():
-    connection = mysql.connector.connect(host="35.188.230.66",
-        user="root",
-        password="ece480team16",
-        database="patientdata")
+    connection = pymysql.connect(host="mysql-user.cse.msu.edu",
+        user="huangmax",
+        passwd="A56081598",
+        database="huangmax")
     return connection
 
 def main():

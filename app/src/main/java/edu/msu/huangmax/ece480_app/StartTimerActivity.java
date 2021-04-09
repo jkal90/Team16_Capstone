@@ -11,6 +11,10 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
 public class StartTimerActivity extends AppCompatActivity {
 
     private TextView countdownText;
@@ -20,6 +24,9 @@ public class StartTimerActivity extends AppCompatActivity {
     private long timeLeftInMilliseconds = 1800000; //30 minutes
      // 5000 for demo
     private boolean running = false;
+    private final SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss");
+    private String startTime;
+    private String endTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +36,7 @@ public class StartTimerActivity extends AppCompatActivity {
         countdownText = findViewById(R.id.timer);
         stopButton = findViewById(R.id.startStop);
         endButton = findViewById(R.id.endButton);
+        startTime = formatter.format(new Date());
         startTimer();
 
         stopButton.setOnClickListener(new View.OnClickListener() {
@@ -108,6 +116,13 @@ public class StartTimerActivity extends AppCompatActivity {
         }
     }
     public void thankYou() {
+        endTime = formatter.format(new Date());
+        DatabaseTool databaseTool = new DatabaseTool();
+        String[] responses = new String[2];
+        responses[0] = startTime;
+        responses[1] = endTime;
+        databaseTool.writeTimerUse(responses);
+
         Intent intent = new Intent(this, ThankYouActivity.class);
         startActivity(intent);
     }

@@ -1,6 +1,6 @@
 <?php
 
-$con=mysqli_connect("35.188.230.66","root","ece480team16","patientdata");
+$con=mysqli_connect("mysql-user.cse.msu.edu","huangmax","A56081598","huangmax");
 
 if (!$con) {
     die("Failed to connect to MySQL: " . mysqli_connect_error());
