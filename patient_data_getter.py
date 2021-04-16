@@ -15,18 +15,6 @@ COL_HEADERS = { "wakeup_questions":
 BASE_REQUEST = 'https://webdev.cse.msu.edu/~huangmax/ece480/ece480app/retrieve_data.php?table='
 
 def main():
-    '''
-    connection = get_connection()
-    cursor = connection.cursor()
-    print("Welcome to the patient CSV getter.")
-    user_in = input("Would you like data sorted by user_id? (y or n; if n, entries will be ordered by time received): ")
-    user_in = user_in.lower()
-    while user_in != 'y' and user_in != 'n':
-        print("Invalid input, try again")
-        user_in = input("Would you like data sorted by user_id? (y or n; if n, entries will be ordered by time received): ")
-        user_in = user_in.lower()
-    sort_by_user = user_in == 'y'
-    '''
     for table in COL_HEADERS:
         query = BASE_REQUEST + table
         req = requests.get(query)

@@ -43,9 +43,16 @@ public class ReminderActivity extends AppCompatActivity {
 
                 Calendar calendar = Calendar.getInstance();
 
+                EditText text = findViewById(R.id.reminder_time);
+                String userInput = text.getText().toString();
+
+                int colon = userInput.indexOf(':');
+                String hour = userInput.substring(0, colon);
+                String minute = userInput.substring(colon + 1);
+
                 // 8:00
-                calendar.set(Calendar.HOUR_OF_DAY, 20);
-                calendar.set(Calendar.MINUTE, 0);
+                calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hour));
+                calendar.set(Calendar.MINUTE, Integer.parseInt(minute));
                 calendar.set(Calendar.SECOND, 0);
 
                 Intent intent = new Intent(getApplicationContext(), NotificationReceiver.class);
@@ -63,7 +70,7 @@ public class ReminderActivity extends AppCompatActivity {
                 builder.setSmallIcon(R.drawable.__clipart_sun_1);
                 builder.setPriority(NotificationCompat.PRIORITY_HIGH);
                 NotificationManagerCompat managerCompat = NotificationManagerCompat.from(ReminderActivity.this);
-                managerCompat.notify(1, builder.build());
+                //managerCompat.notify(1, builder.build());
 
                 onSubmit();
             }

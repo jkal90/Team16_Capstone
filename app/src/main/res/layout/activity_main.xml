@@ -247,19 +247,4 @@
             android:textSize="18sp" />
     </RelativeLayout>
 
-    <FrameLayout
-        android:id="@+id/logOutFrame"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center">
-
-        <Button
-            android:id="@+id/logOut"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/logout" />
-
-    </FrameLayout>
-
 </LinearLayout>
