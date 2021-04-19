@@ -50,6 +50,11 @@ public class WakeUpQuestionsActivity extends AppCompatActivity {
 
     public void onSubmit() {
         DatabaseTool databaseTool = new DatabaseTool(getSharedPreferences("preferences", MODE_PRIVATE));
+        if (!databaseTool.isValidUser()) {
+            Intent intent = new Intent(this, ReEnterActivity.class);
+            startActivity(intent);
+            return;
+        }
 
         EditText wakeUpTimeGet = findViewById(R.id.editTextTime);
         responses[0] = wakeUpTimeGet.getText().toString();

@@ -29,6 +29,12 @@ public class BedtimeQuestionsActivity extends AppCompatActivity {
     public void onSubmit() {
         DatabaseTool databaseTool = new DatabaseTool(getSharedPreferences("preferences", MODE_PRIVATE));
 
+        if (!databaseTool.isValidUser()) {
+            Intent intent = new Intent(this, ReEnterActivity.class);
+            startActivity(intent);
+            return;
+        }
+
         EditText getter;
         getter = findViewById(R.id.bedtimeEntry);
         responses[0] = getter.getText().toString();

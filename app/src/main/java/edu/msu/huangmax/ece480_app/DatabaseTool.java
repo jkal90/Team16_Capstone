@@ -81,7 +81,7 @@ public class DatabaseTool {
                 public void run() {
                     try  {
                         String writeLink = link;
-                        writeLink += "wakeup_insert.php?" + "user_id="
+                        writeLink += "wakeup_insert.php?" + "submit_time=" + time + "&user_id="
                                 + userId + "&time=" + responses[0] + "&response1=" + responses[1]
                                 + "&response2=" + responses[2] + "&response3=" + responses[3];
                         for (int i = 0; i < writeLink.length(); i++) {
@@ -118,7 +118,7 @@ public class DatabaseTool {
                             }
                         }
                         String writeLink = link;
-                        writeLink += "nap_insert.php?" + "user_id="
+                        writeLink += "nap_insert.php?" + "submit_time=" + time + "&user_id="
                                 + userId + "&nap_taken=" + responses[0] + "&first_nap_start=" + responses[1]
                                 + "&first_nap_end=" + responses[2] + "&second_nap_start=" + responses[3]
                                 + "&second_nap_end=" + responses[4] + "&third_nap_start=" + responses[5]
@@ -157,7 +157,7 @@ public class DatabaseTool {
                             }
                         }
                         String writeLink = link;
-                        writeLink += "bedtime_insert.php?" + "user_id="
+                        writeLink += "bedtime_insert.php?" + "submit_time=" + time + "&user_id="
                                 + userId + "&bedtime=" + responses[0] + "&fatigue_level=" + responses[1]
                                 + "&sleepiness_level=" + responses[2];
                         for (int i = 0; i < writeLink.length(); i++) {

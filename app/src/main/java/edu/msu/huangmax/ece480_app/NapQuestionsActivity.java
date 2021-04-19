@@ -40,11 +40,11 @@ public class NapQuestionsActivity extends AppCompatActivity {
     public void onSubmit() {
         DatabaseTool databaseTool = new DatabaseTool(getSharedPreferences("preferences", MODE_PRIVATE));
         if (!databaseTool.isValidUser()) {
-
-            Intent intent = new Intent(this, SetIDActivity.class);
+            Intent intent = new Intent(this, ReEnterActivity.class);
             startActivity(intent);
             return;
         }
+
         EditText getter;
         responses[0] = spinner.getSelectedItem().toString();
         getter = findViewById(R.id.firstNapStart);

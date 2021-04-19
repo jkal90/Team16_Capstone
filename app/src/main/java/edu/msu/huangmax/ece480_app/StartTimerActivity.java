@@ -12,7 +12,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class StartTimerActivity extends AppCompatActivity {
@@ -24,14 +23,22 @@ public class StartTimerActivity extends AppCompatActivity {
     private long timeLeftInMilliseconds = 1800000; //30 minutes
      // 5000 for demo
     private boolean running = false;
-    private final SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss");
+    private final SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
     private String startTime;
     private String endTime;
+    private DatabaseTool databaseTool;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer);
+
+        databaseTool = new DatabaseTool(getSharedPreferences("preferences", MODE_PRIVATE));
+        if (!databaseTool.isValidUser()) {
+            Intent intent = new Intent(this, ReEnterActivity.class);
+            startActivity(intent);
+            return;
+        }
 
         countdownText = findViewById(R.id.timer);
         stopButton = findViewById(R.id.startStop);
@@ -123,7 +130,6 @@ public class StartTimerActivity extends AppCompatActivity {
     }
     public void thankYou() {
         endTime = formatter.format(new Date());
-        DatabaseTool databaseTool = new DatabaseTool(getSharedPreferences("preferences", MODE_PRIVATE));
         String[] responses = new String[2];
         responses[0] = startTime;
         responses[1] = endTime;
