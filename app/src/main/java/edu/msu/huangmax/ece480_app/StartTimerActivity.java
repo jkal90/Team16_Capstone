@@ -16,6 +16,9 @@ import java.util.Date;
 
 public class StartTimerActivity extends AppCompatActivity {
 
+    private String START = "START TIMER";
+    private String PAUSE = "PAUSE TIMER";
+
     private TextView countdownText;
     private Button stopButton;
     private Button endButton;
@@ -62,8 +65,10 @@ public class StartTimerActivity extends AppCompatActivity {
     }
     public void startStop() {
         if (running) {
+            stopButton.setText(START);
             stopTimer();
         } else {
+            stopButton.setText(PAUSE);
             startTimer();
         }
     }
