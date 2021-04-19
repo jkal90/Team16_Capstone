@@ -50,28 +50,17 @@ public class ReminderActivity extends AppCompatActivity {
                 String hour = userInput.substring(0, colon);
                 String minute = userInput.substring(colon + 1);
 
-                // 8:00
-                calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hour));
+                calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hour) + 12);
                 calendar.set(Calendar.MINUTE, Integer.parseInt(minute));
                 calendar.set(Calendar.SECOND, 0);
 
                 Intent intent = new Intent(getApplicationContext(), NotificationReceiver.class);
-                intent.setAction("Time to do Light Therapy");
                 PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),
                         1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
                 AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
                 alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
                         AlarmManager.INTERVAL_DAY, pendingIntent);
-
-                NotificationCompat.Builder builder = new NotificationCompat.Builder(
-                        ReminderActivity.this, "Light Therapy Notification");
-                builder.setContentTitle("Time to do Light Therapy");
-                builder.setSmallIcon(R.drawable.__clipart_sun_1);
-                builder.setPriority(NotificationCompat.PRIORITY_HIGH);
-                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(ReminderActivity.this);
-                //managerCompat.notify(1, builder.build());
-
                 onSubmit();
             }
         });
