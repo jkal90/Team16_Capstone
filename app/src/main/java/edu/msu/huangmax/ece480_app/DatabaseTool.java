@@ -1,16 +1,77 @@
 package edu.msu.huangmax.ece480_app;
 
+import android.content.SharedPreferences;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.concurrent.CountDownLatch;
+
+import static android.content.Context.MODE_PRIVATE;
 
 public class DatabaseTool {
 
-    private int userId = 15;
+    private String time;
+    private SharedPreferences settings;
+    private String userId;
+    private String birthday;
     private final String link = "https://webdev.cse.msu.edu/~huangmax/ece480/ece480app/";
 
-    public DatabaseTool() {
+    public DatabaseTool(String id, String birthday) {
+        /* FOR TESTING ONLY */
+        userId = id;
+        this.birthday = "\"" + birthday + "\"";
+    }
+    public DatabaseTool(SharedPreferences prefs) {
+        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        time = formatter.format(new Date());
 
+        settings = prefs;
+        userId = settings.getString("ID", "");
+        birthday = settings.getString("birthday", "");
+        birthday = "\"" + birthday + "\"";
+    }
+
+    public boolean isValidUser() {
+        final CountDownLatch latch = new CountDownLatch(1);
+        final int[] value = new int[1];
+        try {
+            Thread thread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try  {
+                        String writeLink = link;
+                        writeLink += "verify_user.php?" + "user_id="
+                                + userId + "&birthday=" + birthday;
+                        for (int i = 0; i < writeLink.length(); i++) {
+                            if (writeLink.charAt(i) == ' ') {
+                                writeLink = writeLink.substring(0, i) + '+' + writeLink.substring(i + 1);
+                            }
+                        }
+                        URL url = new URL(writeLink);
+                        HttpURLConnection con = (HttpURLConnection) url.openConnection();
+                        con.setRequestMethod("POST");
+                        con.connect();
+                        InputStream stream = con.getInputStream();
+                        value[0] = stream.read();
+                        latch.countDown();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+            thread.start();
+            latch.await();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return value[0] != -1;
     }
 
     public void writeWakeUpQuestions(String[] responses) {

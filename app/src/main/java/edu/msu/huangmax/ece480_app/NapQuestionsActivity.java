@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class NapQuestionsActivity extends AppCompatActivity {
 
@@ -37,8 +38,13 @@ public class NapQuestionsActivity extends AppCompatActivity {
     }
 
     public void onSubmit() {
-        DatabaseTool databaseTool = new DatabaseTool();
+        DatabaseTool databaseTool = new DatabaseTool(getSharedPreferences("preferences", MODE_PRIVATE));
+        if (!databaseTool.isValidUser()) {
 
+            Intent intent = new Intent(this, SetIDActivity.class);
+            startActivity(intent);
+            return;
+        }
         EditText getter;
         responses[0] = spinner.getSelectedItem().toString();
         getter = findViewById(R.id.firstNapStart);

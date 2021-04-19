@@ -52,4 +52,13 @@
     <string name="doctor">Doctor:</string>
     <string name="doctor_name">*DOCTOR NAME*</string>
     <string name="set">Set</string>
+    <string name="id">ID: </string>
+    <string name="blank"> </string>
+    <string name="change">Change ID</string>
+    <string name="enter_id">Enter ID: </string>
+    <string name="enter_birthday">Enter Birthday: </string>
+    <string name="format">Please use MM/DD/YYYY as the format</string>
+    <string name="confirm">Confirm</string>
+    <string name="redo_message">The ID and birthday combination you entered is incorrect.  Please try again.</string>
+    <string name="reenter">Re-Enter ID</string>
 </resources>

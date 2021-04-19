@@ -1,9 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SetID">
+    android:layout_gravity="center">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/spacerOneChange"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:id="@+id/enterID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerOneChange"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/enter_id"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerOneChange"
+        android:layout_toEndOf="@id/enterID"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/enterBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enterID"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/enter_birthday"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editID"
+        android:layout_toEndOf="@id/enterBirthday"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/birthdayHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enterBirthday"
+        android:layout_centerHorizontal="true"
+        android:text="@string/format"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/confirmationID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/birthdayHelp"
+        android:layout_centerHorizontal="true"
+        android:onClick="onConfirm"
+        android:text="@string/confirm" />
+
+</RelativeLayout>

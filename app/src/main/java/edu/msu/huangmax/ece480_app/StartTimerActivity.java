@@ -123,7 +123,7 @@ public class StartTimerActivity extends AppCompatActivity {
     }
     public void thankYou() {
         endTime = formatter.format(new Date());
-        DatabaseTool databaseTool = new DatabaseTool();
+        DatabaseTool databaseTool = new DatabaseTool(getSharedPreferences("preferences", MODE_PRIVATE));
         String[] responses = new String[2];
         responses[0] = startTime;
         responses[1] = endTime;

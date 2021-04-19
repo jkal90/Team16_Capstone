@@ -4,63 +4,69 @@
     android:layout_height="match_parent"
     android:layout_gravity="center">
 
+    <View
+        android:id="@+id/spacerOneInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+
     <TextView
         android:id="@+id/myInfo"
         android:layout_width="match_parent"
-        android:layout_height="117dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacerOneInfo"
         android:gravity="center"
         android:text="@string/my_info"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="36sp" />
 
+    <View
+        android:id="@+id/spacerTwoInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/myInfo" />
+
     <TextView
-        android:id="@+id/namePatient"
+        android:id="@+id/id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/myInfo"
-        android:text="@string/nameDisplay"
+        android:layout_below="@id/spacerTwoInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_toStartOf="@id/gapper"
+        android:text="@string/id"
         android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/insertName"
+        android:id="@+id/user_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/myInfo"
-        android:layout_alignEnd="@id/namePatient"
-        android:layout_marginTop="-1dp"
-        android:layout_marginEnd="-176dp"
-        android:text="@string/nameFIllDisplay"
+        android:layout_below="@id/spacerTwoInfo"
+        android:layout_toEndOf="@id/gapper"
+        android:text="@string/blank"
         android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/change_id_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id"
+        android:layout_centerHorizontal="true"
+        android:onClick="onSetID"
+        android:text="@string/change" />
 
     <View
-        android:id="@+id/spacerTwo2"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_below="@id/namePatient" />
+        android:id="@+id/gapper"
+        android:layout_width="10dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/spacerTwoInfo"
+        android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:id="@+id/nameDoctor"
+    <Button
+        android:id="@+id/go_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/spacerTwo2"
-        android:text="@string/doctor"
-        android:textSize="30sp" />
-
-    <TextView
-        android:id="@+id/insertDoctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/nameDoctor"
-        android:layout_alignEnd="@id/nameDoctor"
-        android:layout_marginTop="-42dp"
-        android:layout_marginEnd="-258dp"
-        android:text="@string/doctor_name"
-        android:textSize="30sp" />
-
-    <View
-        android:id="@+id/spacerTwo3"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_below="@id/insertDoctor" />
+        android:layout_below="@id/change_id_button"
+        android:layout_centerHorizontal="true"
+        android:onClick="onReturnHome"
+        android:text="@string/returnHome" />
 
 </RelativeLayout>

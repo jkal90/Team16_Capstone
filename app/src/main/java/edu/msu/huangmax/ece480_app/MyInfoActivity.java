@@ -1,6 +1,7 @@
 package edu.msu.huangmax.ece480_app;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -13,6 +14,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MyInfoActivity extends AppCompatActivity {
 
+    private final static String PREFERENCES = "preferences";
+
+    private SharedPreferences settings;
+
+
     private String[] responses = new String[4];
 
     @Override
@@ -20,17 +26,18 @@ public class MyInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myinfo);
 
-        // Initialize
-        Intent intent = getIntent();
-        TextView namePatient = (TextView) findViewById(R.id.insertName);
+        settings = getSharedPreferences(PREFERENCES, MODE_PRIVATE);
 
-        TextView nameDoctor = (TextView) findViewById(R.id.insertDoctor);
-
-
+        TextView textView = (TextView) findViewById(R.id.user_id);
+        textView.setText(settings.getString("ID", ""));
     }
 
-    public void onSubmit() {
-        Intent intent = new Intent(this, ThankYouActivity.class);
+    public void onSetID(View view) {
+        Intent intent = new Intent(this, SetIDActivity.class);
+        startActivity(intent);
+    }
+    public void onReturnHome() {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }
