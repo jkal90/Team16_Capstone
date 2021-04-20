@@ -44,7 +44,7 @@ The user interface was designed with the target user in mind. Typical users of t
 
 ![User Interface Description](https://github.com/jkal90/Team16_Capstone/blob/44509c984a5c2b07154f853dfebe43d4ba560c9d/UI.JPG)
 
-## Data Extraction
+## Data extraction for healthcare providers
 
 The app writes to the database using a PHP script run through a student CSE Webdev account. None of the database information will need to be stored on the app or local storage, it will all be stored in the cloud. This is done to enhance security to mitigate source code being stored on apps across devices. The medical professionals will have a Python script that retrieves the data from the database and writes it to a CSV. This is also done by accessing the database through PHP.
 
