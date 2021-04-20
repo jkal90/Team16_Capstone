@@ -22,7 +22,7 @@ This class is responsible for all internet-based activities in the app.  It cont
 
 ### Help Activity
 
-This class represents the screen that is visible after selecting the "help" icon on the home screen.  There are buttons on the screen that direct to other videos
+This class represents the screen that is visible after selecting the "help" icon on the home screen.  Once you click on the help button off the home screen, you will be prompted three buttons. One button labeled "Introduction Video" will lead you to an Introduction Video provided by the College of Nursing. The second button labeled "How To Video" will lead you to a How to Video provided by the College of Nursing. Lastly, there is a "Back To Home" button that will take you back to the Home Screen.
 
 ### My Info Activity
 
