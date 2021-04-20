@@ -81,7 +81,13 @@ The user interface was designed with the target user in mind. Typical users of t
 
 The app writes to the database using a PHP script run through a student CSE Webdev account. None of the database information will need to be stored on the app or local storage, it will all be stored in the cloud. This is done to enhance security to mitigate source code being stored on apps across devices. The medical professionals will have a Python script that retrieves the data from the database and writes it to a CSV. This is also done by accessing the database through PHP.
 
-![patient data getter](https://github.com/jkal90/Team16_Capstone/blob/c4bee5952066fa59a2caf5a966f00a4b5a1489ea/patient_data_getter.jpg)
+### Python script for pulling data from a cloud-based .csv file into MS Excel
+
+The python script **patient_data_getter.py** will be stored in a file location which is convenient to the healthcare provider. As long as the healthcare provider has the required software installed, they can generate Excel files with the necessary patient data. The Excel files will be created in the same file location that the **patient_data_getter.py** is saved in.
+
+### Extracted database file format
+
+A seperate Excel file is automatically generated for each database table that exists within the application. For example, a seperate Excel file will be generated for the bedtime questionnaire, the nap time questionnaire, the wake-up questionnaire, and timer usage.
 
 ### Required Software:
 
@@ -90,10 +96,27 @@ The app writes to the database using a PHP script run through a student CSE Webd
 - MySQL Workspace
 - MySQL Python Connector
 
-### Python script for pulling data from a cloud-based .csv file into MS Excel
+### Installing software from PowerShell terminal
 
-The python script **patient_data_getter.py** will be stored in a file location which is convenient to the healthcare provider. As long as the healthcare provider has the required software installed, they can generate Excel files with the necessary patient data. The Excel files will be created in the same file location that the **patient_data_getter.py** is saved in.
+1. Open Windows Powershell from the windows start menu
+2. From command line enter the following commands
 
-### Extracted database file format
+```
+> mkdir patient_light_therapy [enter] 
+# This creates a folder directory named "patient_light_therapy"
 
-A seperate Excel file is automatically generated for each database table that exists within the application. For example, a seperate Excel file will be generated for the bedtime questionnaire, the nap time questionnaire, the wake-up questionnaire, and timer usage.
+> cd .\patient_light_therapy\ [enter]
+# This navigates you into the folder you had just created
+
+> pip3 install python 3.7 [enter] 
+> pip3 install mysql [enter]
+> pip3 install mysql-connector [enter]
+> pip3 install mysql-connector-python3 [enter]
+> pip3 install requests [enter]
+# You have now installed all the required software to run the patient_data_getter.py script
+```
+
+3. Now you may exit the windows powershell terminal and navigate to the folder you have created in the file explorer
+4. You should see the script named **patient_data_getter.py**. To run the python script and generate excel files with the patient light therapy data, double-click **patient_data_getter.py** to run. The excel files should be generated in the same file location.
+
+![patient data getter](https://github.com/jkal90/Team16_Capstone/blob/c4bee5952066fa59a2caf5a966f00a4b5a1489ea/patient_data_getter.jpg)
