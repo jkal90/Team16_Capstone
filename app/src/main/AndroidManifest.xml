@@ -31,7 +31,9 @@
         <activity android:name=".MyInfoActivity" />
         <activity android:name=".IntroVideoActivity" />
         <activity android:name=".HelpActivity" />
+        <activity android:name=".HowToVideoActivity" />
         <receiver android:name=".NotificationReceiver" />
+
     </application>
 
 </manifest>

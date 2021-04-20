@@ -2,8 +2,10 @@ package edu.msu.huangmax.ece480_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
@@ -33,6 +35,11 @@ public class IntroVideoActivity extends AppCompatActivity {
 
         myVideo.start();
 
+    }
+
+    public void onHowBack(View view) {
+        Intent intent = new Intent(this, HelpActivity.class);
+        startActivity(intent);
     }
 
 }
