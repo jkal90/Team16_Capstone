@@ -4,7 +4,7 @@ This is a smartphone app design for personalized cancer symptom management. This
 The goal of this project is to design a smartphone application to help monitor and enhance observation of the prescribed light therapy. The application will be programmed for the time of the day the individual is advised to receive the light therapy. A text reminder will be sent through the app at the advised time of the day to notify the user. Real-time data will be provided by a timer that records start and end times of each light therapy session. If the user does not respond within 10 minutes of the advised time, a second text reminder will be sent, and if the user does not respond within 10 minutes of the second reminder, an alert message will be sent. This smartphone app will be programmed to notify and allow the user to record sleep/wake times, naptimes, and levels of fatigue each night for a pre-set timeframe. All the data collected by the application will be sent and stored in a server for future reference. This smartphone application will replace the previously used paper-pencil daily log.
 
 ## Program Classes:
-[class diagram](https://github.com/jkal90/Team16_Capstone/blob/d7039b2863c8670ba3b7a60f2f141018c1c91958/Class%20diagram.JPG)
+![class diagram](https://github.com/jkal90/Team16_Capstone/blob/d7039b2863c8670ba3b7a60f2f141018c1c91958/Class%20diagram.JPG)
 
 ### Main Activity
 
