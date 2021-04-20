@@ -62,4 +62,8 @@
     <string name="redo_message">The ID and birthday combination you entered is incorrect.  Please try again.</string>
     <string name="reenter">Re-Enter ID</string>
     <string name="notif_text">Notification</string>
+    <string name="menu_intro">Introduction Video</string>
+    <string name="menu_howto">How To Use Video</string>
+    <string name="how_to_video">How To Video</string>
+    <string name="introduction_video">Introduction Video</string>
 </resources>

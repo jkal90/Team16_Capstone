@@ -29,7 +29,7 @@
         <activity android:name=".RepeatingActivity" />
         <activity android:name=".StartTimerActivity" />
         <activity android:name=".MyInfoActivity" />
-        <activity android:name=".HelpActivity" />
+        <activity android:name=".IntroVideoActivity" />
 
         <receiver android:name=".NotificationReceiver" />
     </application>
