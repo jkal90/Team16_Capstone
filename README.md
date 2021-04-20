@@ -25,6 +25,8 @@ The goal of this project is to design a smartphone application to help monitor a
 ### ReEnter Activity
 
 ### Reminder Activity
+![Reminder Activity Framework](https://github.com/jkal90/Team16_Capstone/blob/8eaaa36056bb4524040992ffe14bb2ca9b5e8e0c/Reminder%20Framework.JPG)
+
 
 ### Repeating Activity
 
