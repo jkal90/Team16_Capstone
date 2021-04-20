@@ -5,6 +5,10 @@ This is a smartphone app design for personalized cancer symptom management. This
 
 The goal of this project is to design a smartphone application to help monitor and enhance observation of the prescribed light therapy. The application will be programmed for the time of the day the individual is advised to receive the light therapy. A text reminder will be sent through the app at the advised time of the day to notify the user. Real-time data will be provided by a timer that records start and end times of each light therapy session. If the user does not respond within 10 minutes of the advised time, a second text reminder will be sent, and if the user does not respond within 10 minutes of the second reminder, an alert message will be sent. This smartphone app will be programmed to notify and allow the user to record sleep/wake times, naptimes, and levels of fatigue each night for a pre-set timeframe. All the data collected by the application will be sent and stored in a server for future reference. This smartphone application will replace the previously used paper-pencil daily log.
 
+*Development software used:*
+
+The operating system used for the app is Android 11 and was designed using Android Studio. The backend was written using mostly Java 8 and the front end will be written using XML.  Information gathered by the app will be stored in a database hosted by the Michigan State University department of computer science.
+
 ## Program Classes:
 ![class diagram](https://github.com/jkal90/Team16_Capstone/blob/d7039b2863c8670ba3b7a60f2f141018c1c91958/Class%20diagram.JPG)
 
@@ -27,6 +31,9 @@ The goal of this project is to design a smartphone application to help monitor a
 ### ReEnter Activity
 
 ### Reminder Activity
+
+The reminder alert function is reliable and effectively notifies the user for when light therapy should be administered. The reminder function must reliably send a second notification if the app user does not respond to the first notification within 10 minutes. The graphical user interface (GUI) is easy to navigate and understand. The app should allow the patient to record sleep/wake times, naptimes, and levels of fatigue each night for a pre-set timeframe. The user input data should be stored on a database that is easy to access by the user/care provider
+
 ![Reminder Activity Framework](https://github.com/jkal90/Team16_Capstone/blob/8eaaa36056bb4524040992ffe14bb2ca9b5e8e0c/Reminder%20Framework.JPG)
 
 
