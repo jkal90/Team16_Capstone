@@ -11,15 +11,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:autofillHints=""
         android:ems="10"
+        android:gravity="center"
         android:inputType="time"
-        android:autofillHints="" />
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/time_entry_use"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reminder_time"
+        android:layout_centerHorizontal="true"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="@string/set_time_use"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/set_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/reminder_time"
+        android:layout_below="@id/time_entry_use"
         android:layout_centerHorizontal="true"
         android:text="@string/set" />
 </RelativeLayout>

@@ -50,7 +50,7 @@ public class ReminderActivity extends AppCompatActivity {
                 String hour = userInput.substring(0, colon);
                 String minute = userInput.substring(colon + 1);
 
-                calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hour) + 12);
+                calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hour));
                 calendar.set(Calendar.MINUTE, Integer.parseInt(minute));
                 calendar.set(Calendar.SECOND, 0);
 

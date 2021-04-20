@@ -14,21 +14,39 @@ The operating system used for the app is Android 11 and was designed using Andro
 
 ### Main Activity
 
+This is the screen of the app when lauched.  Each of the icons and the text below them serve as buttons that redirect to other pages.
+
 ### Database Tool
+
+This class is responsible for all internet-based activities in the app.  It contains methods for writing to the various database tables and verifying the legitimacy of the user.  Anytime responses are detected from the other question pages in the app, a DatabaseTool will be created and the appropriate write method is called.  The methods generate the correct HTTP link to store the data and then performs the HTTP request.  The tool is constructed around the preferences of the user, since instances of the class need to know the user_id and birthday of the user to verify whether the user is legitimate.
 
 ### Help Activity
 
+This class represents the screen that is visible after selecting the "help" icon on the home screen.  There are buttons on the screen that direct to other videos
+
 ### My Info Activity
+
+This class represents the screen that is visible after selecting the "my info" icon on the home screen.  This page will show the user his or her unique id number, and have a button to enter a new id number, if his or her current one is incorrect.
 
 ### Bedtime Questions Activity
 
+This class holds the questions that the user must complete before going to sleep at night.  Upon clicking submit, the class will create a DatabaseTool and store the responses in the database.
+
 ### Nap Questions Activity
+
+This class holds the questions that the user must complete regarding his or her naps.  Upon clicking submit, the class will create a DatabaseTool and store the responses in the database.
 
 ### Wake Up Questions Activity
 
+This class holds the questions that the user must complete upon waking up in the morning.  Upon clicking submit, the class will create a DatabaseTool and store the responses in the database.
+
 ### Notification Receiver
 
+This class creates the notification that shows on the user's device at the time specified by the user.
+
 ### ReEnter Activity
+
+This class contains the screen that informs users that they must re-enter their id and birthday, as the current entry is invalid.
 
 ### Reminder Activity
 
@@ -39,11 +57,19 @@ The reminder alert function is reliable and effectively notifies the user for wh
 
 ### Repeating Activity
 
+This screen is the screen shown when the notification is interacted with
+
 ### SetID Activity
+
+This screen is the screen in which the user enters his or her id and birthday.
 
 ### Start Timer Activity
 
+This screen has the timer.  It contains options for the user to pause the timer and end the session early if desired.
+
 ### Thank You Activity
+
+This screen is shown after a submission has been successfully logged.  It has a button to return to the home screen of the app.
 
 ## User Interface
 
