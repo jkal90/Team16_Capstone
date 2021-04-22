@@ -24,4 +24,9 @@ public class HelpActivity extends AppCompatActivity {
         Intent intent = new Intent(this, HowToVideoActivity.class);
         startActivity(intent);
     }
+
+    public void onHelpBack(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }

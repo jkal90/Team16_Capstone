@@ -30,4 +30,19 @@
         android:text="@string/how_to_video"
         android:textSize="30sp" />
 
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/buttonHow"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/buttonHelpBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="onHelpBack"
+        android:text="@string/back_to_home" />
+
 </RelativeLayout>
