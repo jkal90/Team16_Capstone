@@ -120,6 +120,11 @@ Choose from the following installer files that best suits your operating system 
 # You have now installed all the required software to run the patient_data_getter.py script
 ```
 
+### Download the script
+
+1. Open the following link: https://github.com/MaHuCS/PatientDataGetter
+2. Download script by selecting the green "Code" button in the upper right and then selecting "Download ZIP"
+
 3. Now you may exit the windows powershell terminal and navigate to the folder you have created in the file explorer
 4. You should see the script named **patient_data_getter.py**. To run the python script and generate excel files with the patient light therapy data, double-click **patient_data_getter.py** to run. The excel files should be generated in the same file location.
 
