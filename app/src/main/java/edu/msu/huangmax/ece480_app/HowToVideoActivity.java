@@ -16,7 +16,6 @@ public class HowToVideoActivity extends AppCompatActivity {
 
     VideoView myVideo;
     private MediaController media_control;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
