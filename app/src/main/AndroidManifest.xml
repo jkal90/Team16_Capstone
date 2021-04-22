@@ -30,6 +30,7 @@
         <activity android:name=".StartTimerActivity" />
         <activity android:name=".MyInfoActivity" />
         <activity android:name=".IntroVideoActivity" />
+        <activity android:name=".HowToVideoActivity" />
         <activity android:name=".HelpActivity" />
         <receiver android:name=".NotificationReceiver" />
     </application>
