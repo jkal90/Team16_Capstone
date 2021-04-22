@@ -35,7 +35,8 @@ You will click on the Design tab
 Then you will go to Text
 You will erase what was there before, and put in a new label for the initial help screen button.
 You will then see a yellow triangle warning sign
-Click on the warning and look down to where it says Hardcoded Text. Open that warning message and click fix, then ok.
+Click on the warning and look down to where it says Hardcoded Text.
+Open that warning message and click fix, then ok.
 
 
 
