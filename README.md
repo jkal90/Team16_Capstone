@@ -134,21 +134,15 @@ Choose from the following installer files that best suits your operating system 
 
 ### How to Install App
 
-**Download**
+**Download Android Studio**
 
-Download the app from the link using an Android device: https://github.com/MaHuCS/LightTherapyLog
+First you need to make sure you have Android Studio Installed on your computer. Android Studio can be downloaded from the following link: https://developer.android.com/studio/?gclid=EAIaIQobChMIrpXjhvKS8AIViWtvBB06uAe9EAAYASAAEgJvo_D_BwE&gclsrc=aw.ds
 ![Android Studio download](https://github.com/jkal90/Team16_Capstone/blob/03ebb46d8923315c899568eb30cea44c938fd27b/ASdownload.JPG)
 
-1. Download the APK from the link – you should then be able to see it downloading on the top bar of your device
-2. Once it's downloaded, open Downloads, tap on the APK file, and tap Yes when prompted
-3. The app will begin installing on the device
-
-### How to Install App
-
-**Download**
+**Download Light Therapy Smartphone Application**
 
 Download the app from the link using an Android device: https://github.com/MaHuCS/LightTherapyLog
-![Android Studio download](https://github.com/jkal90/Team16_Capstone/blob/03ebb46d8923315c899568eb30cea44c938fd27b/ASdownload.JPG)
+
 
 1. Download the APK from the link – you should then be able to see it downloading on the top bar of your device
 2. Once it's downloaded, open Downloads, tap on the APK file, and tap Yes when prompted
