@@ -24,7 +24,8 @@ This class is responsible for all internet-based activities in the app.  It cont
 
 This class represents the screen that is visible after selecting the "help" icon on the home screen.  Once you click on the help button off the home screen, you will be prompted three buttons. One button labeled "Introduction Video" will lead you to an Introduction Video provided by the College of Nursing. The second button labeled "How To Video" will lead you to a How to Video provided by the College of Nursing. Lastly, there is a "Back To Home" button that will take you back to the Home Screen.
 
-HELP BUTTON VIDEO REPLACEMENT
+**HELP BUTTON VIDEO REPLACEMENT**
+
 First download and name the video you would like to implement into the app.
 Place that video into the raw folder under app/src/main/res/ in your directory.
 Depending on if you are changing the How To Video or the Introduction Video, you will go to HowToVideoActivity or IntroVideoActivity.
