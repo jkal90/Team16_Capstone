@@ -157,14 +157,21 @@ Download the app from the link using an Android device: https://github.com/MaHuC
 ### Development
 
 **MySQL**
+
 The following statements must be run on the new database:
+
 CREATE TABLE bedtime_questions (submit_time TEXT, bedtime TEXT, fatigue_level INTEGER, sleepiness_level INTEGER, user_id INTEGER);
+
 CREATE TABLE nap_questions (submit_time TEXT, nap_taken TEXT, first_nap_start TEXT, first_nap_end TEXT, second_nap_start TEXT, second_nap_end TEXT, third_nap_start TEXT, third_nap_end TEXT, user_id INTEGER);
+
 CREATE TABLE wakeup_questions (submit_time TEXT, time TEXT, difficulty_sleeping TEXT, waking_up_during TEXT, woke_up_early TEXT, user_id INTEGER);
+
 CREATE TABLE timer_usage (start_time TEXT, end_time TEXT, user_id INTEGER);
+
 CREATE TABLE users (user_id INTEGER,  birthday TEXT);
 
 The college of nursing must provide a list of the user IDs and all of the users’ birthdays to be stored in the database.  These must be inserted into the “users” table for that app to work properly.
 
 **PHP**
+
 Change the database information in all of the .php files to match the new database information
