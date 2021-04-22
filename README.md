@@ -124,40 +124,20 @@ Choose from the following installer files that best suits your operating system 
 
 1. Open the following link: https://github.com/MaHuCS/PatientDataGetter
 2. Download script by selecting the green "Code" button in the upper right and then selecting "Download ZIP"
+![Screenshot of Download ZIP](https://github.com/jkal90/Team16_Capstone/blob/master/GithubScreenshot.png)
 
 3. Now you may exit the windows powershell terminal and navigate to the folder you have created in the file explorer
 4. You should see the script named **patient_data_getter.py**. To run the python script and generate excel files with the patient light therapy data, double-click **patient_data_getter.py** to run. The excel files should be generated in the same file location.
 
 ![patient data getter](https://github.com/jkal90/Team16_Capstone/blob/c4bee5952066fa59a2caf5a966f00a4b5a1489ea/patient_data_getter.jpg)
 
-### How to download the app for further testing/development
+### How to Install App
 
-**Set up Android Studio**
+**Download**
 
-Download Android Studio from the link: https://developer.android.com/studio/?gclid=EAIaIQobChMItMmPhLCS8AIVDmpvBB1AxAlpEAAYASAAEgLWhvD_BwE&gclsrc=aw.ds
+Download the app from the link using an Android device: https://github.com/MaHuCS/LightTherapyLog
 ![Android Studio download](https://github.com/jkal90/Team16_Capstone/blob/03ebb46d8923315c899568eb30cea44c938fd27b/ASdownload.JPG)
 
-Easy as clicking the large download button and following the steps prompted by the installation wizard. No advanced configurations required.
-
-**Pull repository into Android Studio from Github**
-
-Easiest method is from the Windows Powershell terminal window. 
-Open Windows Powershell and navigate to the “StudioProjects” folder in your user directory that Android Studio has created for you:
-```
-> cd .\users\(personal user directory)\StudioProjects\ [enter]
-```
-Once you are in the StudioProjects folder directory, you can “pull” the project directory from gituhub. The link to the project github repository is found here: https://github.com/jkal90/Team16_Capstone.git
-
-Contact kalichjo@msu.edu for help obtaining access to this repository
-
-To pull the repository from github via the powershell terminal, enter the following command:
-```
-> git pull https://github.com/jkal90/Team16_Capstone.git [enter]
-```
-The application package should now be available in your Android Studio project directory. To open the project in Android Studio, navigate to:
-
-File > Open … and in the File Browser, navigate to:
-StudioProjects > Team16_Capstone … Click “Ok”
-
-![Open Project](https://github.com/jkal90/Team16_Capstone/blob/03ebb46d8923315c899568eb30cea44c938fd27b/open%20project.JPG)
-To run the application with the project active, click on the ‘Run App’  button  in the upper right of the window
+1. Download the APK from the link – you should then be able to see it downloading on the top bar of your device
+2. Once it's downloaded, open Downloads, tap on the APK file, and tap Yes when prompted
+3. The app will begin installing on the device
