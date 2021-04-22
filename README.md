@@ -126,8 +126,9 @@ Choose from the following installer files that best suits your operating system 
 2. Download script by selecting the green "Code" button in the upper right and then selecting "Download ZIP"
 ![Screenshot of Download ZIP](https://github.com/jkal90/Team16_Capstone/blob/master/GithubScreenshot.png)
 
-3. Now you may exit the windows powershell terminal and navigate to the folder you have created in the file explorer
-4. You should see the script named **patient_data_getter.py**. To run the python script and generate excel files with the patient light therapy data, double-click **patient_data_getter.py** to run. The excel files should be generated in the same file location.
+3. Extract the **patient_data_getter.py** from the ZIP and add it to the new folder you created
+4. Now you may exit the windows powershell terminal and navigate to the folder you have created in the file explorer
+5. You should see the script named **patient_data_getter.py**. To run the python script and generate excel files with the patient light therapy data, double-click **patient_data_getter.py** to run. The excel files should be generated in the same file location.
 
 ![patient data getter](https://github.com/jkal90/Team16_Capstone/blob/c4bee5952066fa59a2caf5a966f00a4b5a1489ea/patient_data_getter.jpg)
 
@@ -141,3 +142,29 @@ Download the app from the link using an Android device: https://github.com/MaHuC
 1. Download the APK from the link – you should then be able to see it downloading on the top bar of your device
 2. Once it's downloaded, open Downloads, tap on the APK file, and tap Yes when prompted
 3. The app will begin installing on the device
+
+### How to Install App
+
+**Download**
+
+Download the app from the link using an Android device: https://github.com/MaHuCS/LightTherapyLog
+![Android Studio download](https://github.com/jkal90/Team16_Capstone/blob/03ebb46d8923315c899568eb30cea44c938fd27b/ASdownload.JPG)
+
+1. Download the APK from the link – you should then be able to see it downloading on the top bar of your device
+2. Once it's downloaded, open Downloads, tap on the APK file, and tap Yes when prompted
+3. The app will begin installing on the device
+
+### Development
+
+**MySQL**
+The following statements must be run on the new database:
+CREATE TABLE bedtime_questions (submit_time TEXT, bedtime TEXT, fatigue_level INTEGER, sleepiness_level INTEGER, user_id INTEGER);
+CREATE TABLE nap_questions (submit_time TEXT, nap_taken TEXT, first_nap_start TEXT, first_nap_end TEXT, second_nap_start TEXT, second_nap_end TEXT, third_nap_start TEXT, third_nap_end TEXT, user_id INTEGER);
+CREATE TABLE wakeup_questions (submit_time TEXT, time TEXT, difficulty_sleeping TEXT, waking_up_during TEXT, woke_up_early TEXT, user_id INTEGER);
+CREATE TABLE timer_usage (start_time TEXT, end_time TEXT, user_id INTEGER);
+CREATE TABLE users (user_id INTEGER,  birthday TEXT);
+
+The college of nursing must provide a list of the user IDs and all of the users’ birthdays to be stored in the database.  These must be inserted into the “users” table for that app to work properly.
+
+**PHP**
+Change the database information in all of the .php files to match the new database information
