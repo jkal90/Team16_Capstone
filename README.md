@@ -128,6 +128,7 @@ Choose from the following installer files that best suits your operating system 
 ### How to download the app for further testing/development
 
 **Set up Android Studio**
+
 Download Android Studio from the link: https://developer.android.com/studio/?gclid=EAIaIQobChMItMmPhLCS8AIVDmpvBB1AxAlpEAAYASAAEgLWhvD_BwE&gclsrc=aw.ds
 ![Android Studio download](https://github.com/jkal90/Team16_Capstone/blob/03ebb46d8923315c899568eb30cea44c938fd27b/ASdownload.JPG)
 
@@ -154,3 +155,4 @@ File > Open … and in the File Browser, navigate to:
 StudioProjects > Team16_Capstone … Click “Ok”
 
 ![Open Project](https://github.com/jkal90/Team16_Capstone/blob/03ebb46d8923315c899568eb30cea44c938fd27b/open%20project.JPG)
+To run the application with the project active, click on the ‘Run App’  button  in the upper right of the window
