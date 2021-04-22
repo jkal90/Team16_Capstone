@@ -96,6 +96,11 @@ A seperate Excel file is automatically generated for each database table that ex
 - MySQL Workspace
 - MySQL Python Connector
 
+### Install Python 3.7.9
+Python 3.7.9 can easily be installed by visiting the link: https://www.python.org/downloads/release/python-379/
+Choose from the following installer files that best suits your operating system and click through the easy to follow steps in the installation wizard:
+![python 3.7.9](https://github.com/jkal90/Team16_Capstone/blob/bd88ce00d4ab12be2819d774233c7867a86cfb24/python379.JPG)
+
 ### Installing software from PowerShell terminal
 
 1. Open Windows Powershell from the windows start menu
@@ -108,7 +113,6 @@ A seperate Excel file is automatically generated for each database table that ex
 > cd .\patient_light_therapy\ [enter]
 # This navigates you into the folder you had just created
 
-> pip3 install python 3.7 [enter] 
 > pip3 install mysql [enter]
 > pip3 install mysql-connector [enter]
 > pip3 install mysql-connector-python3 [enter]
