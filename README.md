@@ -130,7 +130,6 @@ Choose from the following installer files that best suits your operating system 
 > cd .\patient_light_therapy\ [enter]
 # This navigates you into the folder you had just created
 
-> pip3 install mysql [enter]
 > pip3 install mysql-connector [enter]
 > pip3 install mysql-connector-python3 [enter]
 > pip3 install requests [enter]
